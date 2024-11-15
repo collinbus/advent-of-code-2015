@@ -41,13 +41,13 @@ func TestDay${1}Part1(t *testing.T) {
 	}
 }
 
-//func TestDay${1}Part2(t *testing.T) {
-//	input := helpers.ReadInput("input.txt")
-//
-//	result := Day${1}Part2(input)
-//
-//	if result != 0 {
-//		t.Fatalf("%d is not the correct position\n", result)
-//	}
-//}
+/*func TestDay${1}Part2(t *testing.T) {
+	input := helpers.ReadInput("input.txt")
+
+	result := Day${1}Part2(input)
+
+	if result != 0 {
+		t.Fatalf("%d is not the correct position\n", result)
+	}
+}*/
 EOF
