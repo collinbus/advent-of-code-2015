@@ -47,7 +47,7 @@ func TestDay${1}Part1(t *testing.T) {
 	result := Day${1}Part2(input)
 
 	if result != 0 {
-		t.Fatalf("%d is not the correct position\n", result)
+		t.Fatalf("%d is not the correct answer\n", result)
 	}
 }*/
 EOF
