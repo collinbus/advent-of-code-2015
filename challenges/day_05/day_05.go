@@ -1,7 +1,6 @@
 package day_05
 
 import (
-	"fmt"
 	"regexp"
 )
 
@@ -16,8 +15,13 @@ func Day05Part1(lines []string) int {
 }
 
 func Day05Part2(lines []string) int {
-	fmt.Println("Implement me!")
-	return -1
+	niceStrings := 0
+	for _, line := range lines {
+		if isNicePart2(line) {
+			niceStrings++
+		}
+	}
+	return niceStrings
 }
 
 func isNice(s string) bool {
@@ -40,6 +44,23 @@ func isNice(s string) bool {
 		}
 	}
 
+	return false
+}
+
+func isNicePart2(s string) bool {
+	hasTwoPairs := false
+	for i := 0; i < len(s) - 1; i++ {
+		for j := i + 2; j < len(s) - 1; j++ {
+			if s[i:i+2] == s[j:j+2] {
+				hasTwoPairs = true
+			}
+		}
+	}
+	for i:= 0; i < len(s) - 2; i++ {
+		if s[i] == s[i+2] {
+			return hasTwoPairs
+		}
+	}
 	return false
 }
 
